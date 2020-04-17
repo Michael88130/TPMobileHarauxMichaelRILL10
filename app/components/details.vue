@@ -1,17 +1,19 @@
 <template>
   <Page>
-    <ActionBar  :title="dinosaure.nom">
-       <Button text="back" @tap="goBack" />
+    <ActionBar  >
+        <!-- Bouton retour -->
+       <Button text="Retour" @tap="goBack" /> 
     </ActionBar >
     <StackLayout>
-         <Label :text="nom" />
-   
+        <!-- Affichage du nom et de la déscription -->
+         <Label :text="nom" v-bind:class="[activeClass, errorClass]"/>
+         <Label :text="desc" />
     </StackLayout>
   </Page>
 </template>
 
 <script>
-import dino from '@/models/model.dinosaure';
+import dino from '@/models/model.dinosaure'; //Import du model
 const page = {
 
 }
@@ -23,25 +25,16 @@ props:{
     dinosaure: dino
 },
   methods: {
-        goBack() {
+    goBack() { //Méthode de retour
       this.$navigateBack();
     }
   },
-    
-
-/* computed:{
-    nom() {
-        return { nom : dinosaure.nom} 
-    }
-},  */
-
    data(){
         return{
-            
-                nom : this.dinosaure.nom
+            //Retour du nom et de la description de l'item selectionné
+                nom : this.dinosaure.nom, 
+                desc : this.dinosaure.description
         }
-        
     },  
-
 }; 
 </script>
