@@ -1,64 +1,59 @@
 <template>
   <Page>
-    <ActionBar class="action-bar" title="Home Page">
+    <ActionBar class="action-bar" title="Les Dinosaures">
     </ActionBar>
     <StackLayout>
-        <ListView height='100%' for="item in dinosaures" @itemTap="onItemTap">
+        <ListView for="item in dinosaures" @itemTap="onItemTap">
   <v-template>
-   
-    <Label :text='item.nom' />
-    <Label text="Bonjour" />
+    <!-- Shows the list item label in the default color and style. -->
+    <Label :text="item.nom" />
   </v-template>
 </ListView>
- 
-
     </StackLayout>
   </Page>
 </template>
 
 <script>
 import details from './details';
-import dinosaure from '@/models/model.dinosaure';
+import dino from '@/models/model.dinosaure';
 
 const Dinosaures = [];
 
-const Diplodocus = new dinosaure("Diplodocus");
+const Diplodocus = new dino("Diplodocus");
 Dinosaures.push(Diplodocus);
-const Stegosaure = new dinosaure("Stégosaure");
+const Stegosaure = new dino("Stégosaure");
 Dinosaures.push(Stegosaure);
-const Tyrannosaure = new dinosaure("Tyrannosaure");
+const Tyrannosaure = new dino("Tyrannosaure");
 Dinosaures.push(Tyrannosaure);
+const Dilophosaure = new dino("Dilophosaure");
+Dinosaures.push(Dilophosaure);
+const Albertosaure = new dino("Albertosaure");
+Dinosaures.push(Albertosaure);
 
 export default {
     name :"Home",
-    methods: {
+   data(){
+        return{
+              // dinosaures: [{nom:'Diplodocus'},{nom:'Stégosaure'},{nom:'Tricératops'},{nom:'Dilophosaure'}],
+                dinosaures :Dinosaures
+        }
+        
+    }, 
+
+  components: [
+    details,
+   
+    ],
+
+ 
+methods: {
     onItemTap(event) {
       this.$navigateTo(
           details, 
           { props: {dinosaure: event.item}});
          
     }
-  },
-
-/*    data(){
-        return{
-               // dinosaures: [{text:'Diplodocus'},{text:'Stégosaure'},{text:'Tricératops'},{text:'Dilophosaure'}],
-                 dinosaures :Dinosaures
-        }
-        
-    }, */
-
-  components: {
-    details,
-   dinosaure
-    },
-
-    computed: {
-        dinosaures(){
-            return Dinosaures;
-        }
-    }
-
+  }
 }
 </script>
 

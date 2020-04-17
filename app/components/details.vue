@@ -1,17 +1,17 @@
 <template>
   <Page>
-    <ActionBar class="action-bar" title="Details Page">
-    
-    </ActionBar>
+    <ActionBar  :title="dinosaure.nom">
+       <Button text="back" @tap="goBack" />
+    </ActionBar >
     <StackLayout>
          <Label :text="nom" />
-      <Button text="back" @tap="goBack" />
+   
     </StackLayout>
   </Page>
 </template>
 
 <script>
-import dinosaure from '@/models/model.dinosaure';
+import dino from '@/models/model.dinosaure';
 const page = {
 
 }
@@ -20,7 +20,7 @@ const page = {
     name: "details",
     
 props:{
-    dinosaure: dinosaure
+    dinosaure: dino
 },
   methods: {
         goBack() {
@@ -28,21 +28,20 @@ props:{
     }
   },
     
-  /*  data() {
-        return {};
-    }*/
-computed:{
-    nom() {
-        return  dinosaure.nom;
-    }
-},
 
-/*     data(){
+/* computed:{
+    nom() {
+        return { nom : dinosaure.nom} 
+    }
+},  */
+
+   data(){
         return{
-              
-                 name : $this.dinosaure.nom
+            
+                nom : this.dinosaure.nom
         }
         
-    }, */
+    },  
+
 }; 
 </script>
