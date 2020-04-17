@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import dinosaure from '@/models/model.dinosaure';
 const page = {
 
 }
@@ -19,7 +20,7 @@ const page = {
     name: "details",
     
 props:{
-    nom: String
+    dinosaure: dinosaure
 },
   methods: {
         goBack() {
@@ -27,8 +28,21 @@ props:{
     }
   },
     
-    data() {
+  /*  data() {
         return {};
+    }*/
+computed:{
+    nom() {
+        return  dinosaure.nom;
     }
+},
+
+/*     data(){
+        return{
+              
+                 name : $this.dinosaure.nom
+        }
+        
+    }, */
 }; 
 </script>
