@@ -6,8 +6,9 @@
     </ActionBar >
     <StackLayout>
         <!-- Affichage du nom et de la déscription -->
-         <Label :text="nom" v-bind:class="[activeClass, errorClass]"/>
+         <Label :text="nom" />
          <Label :text="desc" />
+         <Image :src="image"></Image>
     </StackLayout>
   </Page>
 </template>
@@ -33,7 +34,8 @@ props:{
         return{
             //Retour du nom et de la description de l'item selectionné
                 nom : this.dinosaure.nom, 
-                desc : this.dinosaure.description
+                desc : this.dinosaure.description,
+                image : this.dinosaure.image
         }
     },  
 }; 

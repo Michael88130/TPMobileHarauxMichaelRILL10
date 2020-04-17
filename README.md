@@ -8,9 +8,11 @@ En plus de l'archive envoyé par mail comme demandé, j'ai créé un dépot git 
 https://github.com/Michael88130/TPMobileHarauxMichaelRILL10.git
 
 J'ai mis des screenshots de l'application (n'ayant pas d'emulateur sur mon pc).
+Tout compte fait, j'ai réussi à prendre une petite vidéo avec une application que j'ai installée sur mon téméphone.
 
 Ma plus grande difficulté est decomprendre la structure et les balises emplyoyées mais aussi la syntaxe du code différente
 des autres langages que j'ai pu récemment utilisés (Angular et nodeJs).
+Sans compter beaucoup de redemrrage de sideKick qui ne mettait pas l'appli a jour sur mon telephone!
 
 Je continue le TD pour apprendre la techno qui, malgré une prise en main que je ne trouve pas évidente, reste intérresante.
 

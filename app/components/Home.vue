@@ -19,11 +19,11 @@ import dino from '@/models/model.dinosaure'; // Import du model "dinosaure"
 
 // Déclaration dans un tableau des objets "dinosaure" selon le model
 const Dinosaures = [];
-const Diplodocus = new dino("Diplodocus","C'est un très grand quadrupède herbivore au long cou,...");
+const Diplodocus = new dino("Diplodocus","C'est un très grand quadrupède herbivore au long cou,...","https://cdn.shopify.com/s/files/1/0214/3181/2160/products/Figurine_Dinosaure_Diplodocus_600x600.jpg");
 Dinosaures.push(Diplodocus);
-const Stegosaure = new dino("Stégosaure","Stegosaurus, communément appelé stégosaure,...");
+const Stegosaure = new dino("Stégosaure","Stegosaurus, communément appelé stégosaure,...","https://www.figurinesetjeux-city.com/boutique/images_produits/collecta-dino-88353-z.jpg");
 Dinosaures.push(Stegosaure);
-const Tyrannosaure = new dino("Tyrannosaure","Les premiers restes significatifs furent découverts en 1902",);
+const Tyrannosaure = new dino("Tyrannosaure","Les premiers restes significatifs furent découverts en 1902","https://images-na.ssl-images-amazon.com/images/I/71CUMdm61HL._AC_SY355_.jpg");
 Dinosaures.push(Tyrannosaure);
 const Dilophosaure = new dino("Dilophosaure");
 Dinosaures.push(Dilophosaure);
